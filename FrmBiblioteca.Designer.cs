@@ -29,24 +29,14 @@ namespace Biblioteca
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MnuFichero = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuFicheroAlta = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuFicheroConsulta = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.MnuFicheroSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MnuFichero});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(728, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // MnuFichero
             // 
@@ -62,25 +52,35 @@ namespace Biblioteca
             // MnuFicheroAlta
             // 
             this.MnuFicheroAlta.Name = "MnuFicheroAlta";
-            this.MnuFicheroAlta.Size = new System.Drawing.Size(121, 22);
+            this.MnuFicheroAlta.Size = new System.Drawing.Size(180, 22);
             this.MnuFicheroAlta.Text = "Alta";
             // 
             // MnuFicheroConsulta
             // 
             this.MnuFicheroConsulta.Name = "MnuFicheroConsulta";
-            this.MnuFicheroConsulta.Size = new System.Drawing.Size(121, 22);
+            this.MnuFicheroConsulta.Size = new System.Drawing.Size(180, 22);
             this.MnuFicheroConsulta.Text = "Consulta";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(118, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // MnuFicheroSalir
             // 
             this.MnuFicheroSalir.Name = "MnuFicheroSalir";
-            this.MnuFicheroSalir.Size = new System.Drawing.Size(121, 22);
+            this.MnuFicheroSalir.Size = new System.Drawing.Size(180, 22);
             this.MnuFicheroSalir.Text = "Salir";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MnuFichero});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(728, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // FrmBiblioteca
             // 
@@ -101,12 +101,12 @@ namespace Biblioteca
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem MnuFichero;
         private System.Windows.Forms.ToolStripMenuItem MnuFicheroAlta;
         private System.Windows.Forms.ToolStripMenuItem MnuFicheroConsulta;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem MnuFicheroSalir;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 
