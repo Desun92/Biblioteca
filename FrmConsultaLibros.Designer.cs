@@ -30,16 +30,16 @@ namespace Biblioteca
         private void InitializeComponent()
         {
             this.GrpBoxTipoConsulta = new System.Windows.Forms.GroupBox();
-            this.RdbAutor = new System.Windows.Forms.RadioButton();
             this.RdbEditorial = new System.Windows.Forms.RadioButton();
+            this.RdbAutor = new System.Windows.Forms.RadioButton();
             this.LblTitulo = new System.Windows.Forms.Label();
             this.LblAutorEditorial = new System.Windows.Forms.Label();
             this.LblFoto = new System.Windows.Forms.Label();
-            this.TxtTitulo = new System.Windows.Forms.TextBox();
-            this.TxtAutorEditorial = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PctFoto = new System.Windows.Forms.PictureBox();
+            this.LstTitulo = new System.Windows.Forms.ListBox();
+            this.LstAutorEditorial = new System.Windows.Forms.ListBox();
             this.GrpBoxTipoConsulta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // GrpBoxTipoConsulta
@@ -54,6 +54,19 @@ namespace Biblioteca
             this.GrpBoxTipoConsulta.TabStop = false;
             this.GrpBoxTipoConsulta.Text = "Tipo Consulta";
             // 
+            // RdbEditorial
+            // 
+            this.RdbEditorial.AutoSize = true;
+            this.RdbEditorial.Cursor = System.Windows.Forms.Cursors.Default;
+            this.RdbEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.RdbEditorial.Location = new System.Drawing.Point(7, 57);
+            this.RdbEditorial.Name = "RdbEditorial";
+            this.RdbEditorial.Size = new System.Drawing.Size(93, 26);
+            this.RdbEditorial.TabIndex = 1;
+            this.RdbEditorial.Text = "Editorial";
+            this.RdbEditorial.UseVisualStyleBackColor = true;
+            this.RdbEditorial.CheckedChanged += new System.EventHandler(this.RdbEditorial_CheckedChanged);
+            // 
             // RdbAutor
             // 
             this.RdbAutor.AutoSize = true;
@@ -62,21 +75,9 @@ namespace Biblioteca
             this.RdbAutor.Name = "RdbAutor";
             this.RdbAutor.Size = new System.Drawing.Size(71, 26);
             this.RdbAutor.TabIndex = 0;
-            this.RdbAutor.TabStop = true;
             this.RdbAutor.Text = "Autor";
             this.RdbAutor.UseVisualStyleBackColor = true;
-            // 
-            // RdbEditorial
-            // 
-            this.RdbEditorial.AutoSize = true;
-            this.RdbEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.RdbEditorial.Location = new System.Drawing.Point(7, 57);
-            this.RdbEditorial.Name = "RdbEditorial";
-            this.RdbEditorial.Size = new System.Drawing.Size(93, 26);
-            this.RdbEditorial.TabIndex = 1;
-            this.RdbEditorial.TabStop = true;
-            this.RdbEditorial.Text = "Editorial";
-            this.RdbEditorial.UseVisualStyleBackColor = true;
+            this.RdbAutor.CheckedChanged += new System.EventHandler(this.RdbAutor_CheckedChanged);
             // 
             // LblTitulo
             // 
@@ -108,47 +109,51 @@ namespace Biblioteca
             this.LblFoto.TabIndex = 4;
             this.LblFoto.Text = "Foto Portada";
             // 
-            // TxtTitulo
+            // PctFoto
             // 
-            this.TxtTitulo.Location = new System.Drawing.Point(45, 178);
-            this.TxtTitulo.Multiline = true;
-            this.TxtTitulo.Name = "TxtTitulo";
-            this.TxtTitulo.Size = new System.Drawing.Size(186, 203);
-            this.TxtTitulo.TabIndex = 5;
+            this.PctFoto.Location = new System.Drawing.Point(538, 199);
+            this.PctFoto.Name = "PctFoto";
+            this.PctFoto.Size = new System.Drawing.Size(85, 117);
+            this.PctFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PctFoto.TabIndex = 7;
+            this.PctFoto.TabStop = false;
             // 
-            // TxtAutorEditorial
+            // LstTitulo
             // 
-            this.TxtAutorEditorial.Location = new System.Drawing.Point(264, 177);
-            this.TxtAutorEditorial.Multiline = true;
-            this.TxtAutorEditorial.Name = "TxtAutorEditorial";
-            this.TxtAutorEditorial.Size = new System.Drawing.Size(186, 203);
-            this.TxtAutorEditorial.TabIndex = 6;
+            this.LstTitulo.FormattingEnabled = true;
+            this.LstTitulo.Location = new System.Drawing.Point(45, 178);
+            this.LstTitulo.Name = "LstTitulo";
+            this.LstTitulo.Size = new System.Drawing.Size(142, 173);
+            this.LstTitulo.TabIndex = 8;
+            this.LstTitulo.DoubleClick += new System.EventHandler(this.LstTitulo_DoubleClick);
             // 
-            // pictureBox1
+            // LstAutorEditorial
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(538, 199);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(85, 117);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.LstAutorEditorial.FormattingEnabled = true;
+            this.LstAutorEditorial.Location = new System.Drawing.Point(264, 177);
+            this.LstAutorEditorial.Name = "LstAutorEditorial";
+            this.LstAutorEditorial.Size = new System.Drawing.Size(142, 173);
+            this.LstAutorEditorial.TabIndex = 9;
+            this.LstAutorEditorial.Click += new System.EventHandler(this.LstAutorEditorial_Click);
             // 
             // FrmConsultaLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 412);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.TxtAutorEditorial);
-            this.Controls.Add(this.TxtTitulo);
+            this.Controls.Add(this.LstAutorEditorial);
+            this.Controls.Add(this.LstTitulo);
+            this.Controls.Add(this.PctFoto);
             this.Controls.Add(this.LblFoto);
             this.Controls.Add(this.LblAutorEditorial);
             this.Controls.Add(this.LblTitulo);
             this.Controls.Add(this.GrpBoxTipoConsulta);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmConsultaLibros";
             this.Text = "Consulta de libros";
             this.GrpBoxTipoConsulta.ResumeLayout(false);
             this.GrpBoxTipoConsulta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PctFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,8 +167,8 @@ namespace Biblioteca
         private System.Windows.Forms.Label LblTitulo;
         private System.Windows.Forms.Label LblAutorEditorial;
         private System.Windows.Forms.Label LblFoto;
-        private System.Windows.Forms.TextBox TxtTitulo;
-        private System.Windows.Forms.TextBox TxtAutorEditorial;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PctFoto;
+        private System.Windows.Forms.ListBox LstTitulo;
+        private System.Windows.Forms.ListBox LstAutorEditorial;
     }
 }

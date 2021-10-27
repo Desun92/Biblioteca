@@ -42,6 +42,7 @@ namespace Biblioteca
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnCargarFoto = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.PctFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,6 +131,7 @@ namespace Biblioteca
             this.PctFoto.Location = new System.Drawing.Point(557, 119);
             this.PctFoto.Name = "PctFoto";
             this.PctFoto.Size = new System.Drawing.Size(85, 117);
+            this.PctFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PctFoto.TabIndex = 9;
             this.PctFoto.TabStop = false;
             // 
@@ -141,6 +143,7 @@ namespace Biblioteca
             this.BtnGuardar.TabIndex = 10;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnLimpiar
             // 
@@ -150,6 +153,7 @@ namespace Biblioteca
             this.BtnLimpiar.TabIndex = 11;
             this.BtnLimpiar.Text = "Limpiar";
             this.BtnLimpiar.UseVisualStyleBackColor = true;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // BtnCargarFoto
             // 
@@ -159,11 +163,17 @@ namespace Biblioteca
             this.BtnCargarFoto.TabIndex = 12;
             this.BtnCargarFoto.Text = "Cargar Foto";
             this.BtnCargarFoto.UseVisualStyleBackColor = true;
+            this.BtnCargarFoto.Click += new System.EventHandler(this.BtnCargarFoto_Click);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
             // 
             // FrmAltaLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(728, 412);
             this.Controls.Add(this.BtnCargarFoto);
             this.Controls.Add(this.BtnLimpiar);
@@ -178,7 +188,9 @@ namespace Biblioteca
             this.Controls.Add(this.LblEditorial);
             this.Controls.Add(this.LblAutor);
             this.Controls.Add(this.LblTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAltaLibros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta de libros";
             ((System.ComponentModel.ISupportInitialize)(this.PctFoto)).EndInit();
             this.ResumeLayout(false);
@@ -201,5 +213,6 @@ namespace Biblioteca
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Button BtnLimpiar;
         private System.Windows.Forms.Button BtnCargarFoto;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }

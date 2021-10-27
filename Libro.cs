@@ -12,6 +12,16 @@ namespace Biblioteca
         private String Autor;
         private String Editorial;
         private Boolean Nuevo;
+        private String RutaPortada;
+
+        public Libro(String titulo, String autor, String editorial, Boolean nuevo, String rutaPortada)
+        {
+            this.Titulo = titulo;
+            this.Autor = autor;
+            this.Editorial = editorial;
+            this.Nuevo = nuevo;
+            this.RutaPortada = rutaPortada;
+        }
 
         public Libro(String titulo, String autor, String editorial, Boolean nuevo)
         {
@@ -39,6 +49,11 @@ namespace Biblioteca
         public Boolean GetNuevo()
         {
             return this.Nuevo;
+        }
+
+        public String GetRutaPortada()
+        {
+            return this.RutaPortada;
         }
     }
 }
